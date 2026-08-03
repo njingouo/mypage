@@ -308,6 +308,24 @@ html[data-theme="dark"] .btn--solid:hover { color: #0d141c; }
 }
 
 /* ══════════════ RECHERCHE ══════════════ */
+.profilestmt {
+  margin: 0 0 44px; padding: 24px 30px 26px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--r) var(--r) 0;
+  box-shadow: var(--shadow);
+  max-width: 82ch;
+}
+.profilestmt__label {
+  font: 600 11.5px/1 var(--sans); letter-spacing: .13em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 12px;
+}
+.profilestmt p:not(.profilestmt__label) {
+  font-family: var(--serif); font-size: 1.16rem; line-height: 1.58;
+  color: var(--ink); font-weight: 500;
+}
+.profilestmt strong { font-weight: 700; color: var(--ink); }
+
 .split { display: grid; grid-template-columns: 1.55fr 1fr; gap: 40px; align-items: start; }
 .split__main p { margin-bottom: 18px; color: var(--ink-soft); }
 .split__main p strong { color: var(--ink); font-weight: 600; }
