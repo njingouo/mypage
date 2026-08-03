@@ -1,242 +1,735 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF‑8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Aoudou Njingouo Mounchingam – Personal Website</title>
-    <!-- Google Fonts for clean typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="style.css" />
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pO58XUGJ73x3xui4K3iFoOJ9cR03mq3D+UdzFc+8m54fJoHrC8A5MGBqA7yB8xuM6cKfL8a0usPqnSf1Pe3qVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <!-- Navigation bar -->
-    <nav id="navbar">
-      <div class="container nav-wrapper">
-        <div class="logo">Aoudou Njingouo Mounchingam</div>
-        <ul class="nav-links">
-          <li><a href="#profile-section">About</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#teaching">Teaching</a></li>
-          <li><a href="#awards">Awards</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#languages">Languages</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aoudou Njingouo Mounchingam — Sociologue quantitativiste &amp; démographe</title>
+
+<meta name="description" content="Aoudou Njingouo Mounchingam, PhD (c) — sociologue quantitativiste et démographe. Épidémiologie sociale, normes de genre, inégalités de santé, inférence causale, analyse de survie et apprentissage automatique appliqué à la santé des populations.">
+<meta name="keywords" content="sociologie quantitative, démographie, épidémiologie sociale, inférence causale, analyse de survie, machine learning, santé des populations, normes de genre, EDS, DHS, R, Python, Stata, UQAM">
+<meta name="author" content="Aoudou Njingouo Mounchingam">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Aoudou Njingouo Mounchingam — Sociologue quantitativiste &amp; démographe">
+<meta property="og:description" content="Épidémiologie sociale, inégalités de santé, inférence causale et apprentissage automatique appliqué à la santé des populations.">
+<meta property="og:image" content="images/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aoudou Njingouo Mounchingam",
+  "jobTitle": "Doctorant en sociologie quantitative et démographe",
+  "email": "mailto:njingouo_mounchingam.aoudou@courrier.uqam.ca",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Université du Québec à Montréal (UQAM)"
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "HEC Montréal" },
+    { "@type": "CollegeOrUniversity", "name": "Aix-Marseille Université" },
+    { "@type": "CollegeOrUniversity", "name": "IFORD, Université de Yaoundé II" }
+  ],
+  "knowsAbout": ["Épidémiologie sociale", "Démographie", "Inférence causale", "Analyse de survie", "Apprentissage automatique", "Normes de genre", "Santé des populations"],
+  "knowsLanguage": ["fr", "en"],
+  "url": "https://njingouo.github.io/mypage/"
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main" lang="fr">Aller au contenu</a>
+<a class="skip-link" href="#main" lang="en">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="#top">
+      <span class="nav__mark">ANM</span>
+      <span class="nav__name">Aoudou Njingouo Mounchingam</span>
+    </a>
+
+    <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav__menu" id="menu">
+      <a href="#profil"><span lang="fr">Profil</span><span lang="en">Profile</span></a>
+      <a href="#recherche"><span lang="fr">Recherche</span><span lang="en">Research</span></a>
+      <a href="#expertise"><span lang="fr">Expertise</span><span lang="en">Expertise</span></a>
+      <a href="#publications"><span lang="fr">Publications</span><span lang="en">Publications</span></a>
+      <a href="#enseignement"><span lang="fr">Enseignement</span><span lang="en">Teaching</span></a>
+      <a href="#parcours"><span lang="fr">Parcours</span><span lang="en">Experience</span></a>
+      <a href="#contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a>
+
+      <div class="nav__tools">
+        <div class="langswitch" role="group" aria-label="Langue / Language">
+          <button data-setlang="fr" class="is-on">FR</button>
+          <button data-setlang="en">EN</button>
+        </div>
+        <button class="themebtn" id="theme" aria-label="Thème / Theme" title="Thème / Theme">
+          <svg viewBox="0 0 24 24" class="i-sun" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+          <svg viewBox="0 0 24 24" class="i-moon" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+        </button>
       </div>
     </nav>
-    <!-- Profile Section: sidebar and main content -->
-    <div id="profile-section" class="container">
-      <aside class="sidebar">
-        <img src="images/profile.jpg" alt="Portrait of Aoudou Njingouo Mounchingam" class="profile-photo" />
-        <h1>Aoudou Njingouo Mounchingam</h1>
-        <p class="tagline">Ph.D. candidate in Quantitative &amp; Computational Sociology</p>
-        <p class="affiliation"><a href="https://uqam.ca" target="_blank" rel="noopener">University of Quebec at Montréal</a></p>
-        <div class="contact-icons">
-          <a href="mailto:njingouo_mounchingam.aoudou@courrier.uqam.ca" title="Email"><i class="fa fa-envelope"></i></a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
+  </div>
+</header>
 
-        <!-- CV button -->
-        <a href="CV_Aoudou_Njingouo_English.pdf" class="cv-button" target="_blank" rel="noopener">Download CV</a>
-      </aside>
-      <main class="content">
-        <h2>Welcome to my website</h2>
-        <p>
-          I am a PhD candidate in quantitative and computational sociology at
-          the University of Quebec at Montréal (UQAM). My academic journey spans
-         data science, applied demography, disciplines that under pin my research in population health
-         My work combines rigorous statistical methods with machine learning approaches to address pressing 
-          issues such as the role of gender inequalities and norms on child mortality.
-    
-        </p>
-        <p>
-          In addition to my own research, I serve as a research assistant
-          on several projects, collaborating with interdisciplinary teams across
-          Canada. My broader interests include computational social science and public policy evaluation.
-        </p>
-        <h3>Research Interests</h3>
-        <ul class="interests-list">
-          <li>Applied demography</li>
-          <li>Applied statistics</li>
-          <li>Population health</li>
-          <li>Computational social science</li>
-          <li>Public policy evaluation</li>
-        </ul>
-        <h3>Education</h3>
-        <ul class="education-list">
-          <li>
-            <i class="fa fa-graduation-cap"></i>
-            <div class="edu-details">
-              <span class="edu-degree">Ph.D. in Quantitative &amp; Computational Sociology</span>
-              <span class="edu-institution">University of Quebec at Montreal, Canada</span>
-              <span class="edu-date">2021–2026 (expected)</span>
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-graduation-cap"></i>
-            <div class="edu-details">
-              <span class="edu-degree">M.A. in Data Science-Business analytics</span>
-              <span class="edu-institution">HEC Montreal, Canada</span>
-              <span class="edu-date">2025–2026 (expected)</span>
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-graduation-cap"></i>
-            <div class="edu-details">
-              <span class="edu-degree">M.A. in Applied Statistics</span>
-              <span class="edu-institution">Aix‑Marseille University, France</span>
-              <span class="edu-date">2020–2021</span>
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-graduation-cap"></i>
-            <div class="edu-details">
-              <span class="edu-degree">M.A. in Demography</span>
-              <span class="edu-institution">IFORD, Cameroon</span>
-              <span class="edu-date">2018–2020</span>
-            </div>
-          </li>
-          <li>
-            <i class="fa fa-graduation-cap"></i>
-            <div class="edu-details">
-              <span class="edu-degree">B.A. in Mathematics</span>
-              <span class="edu-institution">University of Yaoundé I, Cameroon</span>
-              <span class="edu-date">2012–2015</span>
-            </div>
-          </li>
-        </ul>
-      </main>
+<main id="main">
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero__grid"></div>
+  <div class="wrap hero__inner">
+
+    <div class="hero__text">
+      <p class="hero__eyebrow">
+        <span lang="fr">Doctorant en sociologie · Démographe · Data scientist</span>
+        <span lang="en">PhD Candidate in Sociology · Demographer · Data Scientist</span>
+      </p>
+
+      <h1 class="hero__name">Aoudou Njingouo<br>Mounchingam</h1>
+
+      <p class="hero__lede">
+        <span lang="fr">Je mesure les <strong>inégalités sociales de santé</strong> et l'effet des <strong>normes de genre</strong> sur la survie des populations, en combinant modèles statistiques classiques, <strong>inférence causale</strong> et <strong>apprentissage automatique</strong>.</span>
+        <span lang="en">I measure <strong>social inequalities in health</strong> and the effect of <strong>gender norms</strong> on population survival, combining conventional statistical models, <strong>causal inference</strong> and <strong>machine learning</strong>.</span>
+      </p>
+
+      <p class="hero__where">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <span lang="fr">Département de sociologie, Université du Québec à Montréal — Montréal, Canada</span>
+        <span lang="en">Department of Sociology, Université du Québec à Montréal — Montreal, Canada</span>
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn btn--solid" href="assets/CV_Aoudou_Njingouo_Mounchingam.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><path d="M12 3v12M12 15l-4-4M12 15l4-4M4 18v2h16v-2"/></svg>
+          <span lang="fr">Télécharger le CV</span><span lang="en">Download CV</span>
+        </a>
+        <a class="btn" href="#publications">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><path d="M4 5.5A2 2 0 0 1 6 4h5v16H6a2 2 0 0 0-2 1.5ZM20 5.5A2 2 0 0 0 18 4h-5v16h5a2 2 0 0 1 2 1.5Z"/></svg>
+          <span lang="fr">Voir les publications</span><span lang="en">View publications</span>
+        </a>
+        <a class="btn" href="mailto:njingouo_mounchingam.aoudou@courrier.uqam.ca">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+          <span lang="fr">Me contacter</span><span lang="en">Get in touch</span>
+        </a>
+      </div>
     </div>
-    <!-- Research Section -->
-    <section id="research" class="section">
-      <div class="container">
-        <h2>Research</h2>
+
+    <figure class="hero__photo">
+      <img src="images/profile.jpg" alt="Aoudou Njingouo Mounchingam" width="480" height="480" loading="eager">
+      <figcaption>
+        <span lang="fr">Résident permanent canadien · FR / EN</span>
+        <span lang="en">Canadian permanent resident · FR / EN</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <ul class="stats">
+      <li><b>8</b><span lang="fr">articles évalués par les pairs</span><span lang="en">peer-reviewed articles</span></li>
+      <li><b>3</b><span lang="fr">manuscrits en évaluation</span><span lang="en">manuscripts under review</span></li>
+      <li><b>4</b><span lang="fr">rapports de recherche</span><span lang="en">research reports</span></li>
+      <li><b>4</b><span lang="fr">cours enseignés (1<sup>er</sup> cycle → 3<sup>e</sup> cycle)</span><span lang="en">courses taught (BA → PhD level)</span></li>
+      <li><b>4</b><span lang="fr">diplômes (doctorat + 3 maîtrises)</span><span lang="en">degrees (PhD + 3 master's)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════ PROFIL / POSITIONNEMENT ══════════ -->
+<section id="profil" class="sec">
+  <div class="wrap">
+    <p class="sec__kicker"><span lang="fr">Positionnement</span><span lang="en">Positioning</span></p>
+    <h2 class="sec__title"><span lang="fr">Trois façons de travailler avec moi</span><span lang="en">Three ways to work with me</span></h2>
+    <p class="sec__lead">
+      <span lang="fr">Un même socle méthodologique — la mesure rigoureuse des phénomènes sociaux et sanitaires — décliné en trois rôles complémentaires.</span>
+      <span lang="en">One methodological foundation — the rigorous measurement of social and health phenomena — applied across three complementary roles.</span>
+    </p>
+
+    <div class="cards3">
+      <article class="card">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 9 4.5-9 4.5-9-4.5L12 4Z"/><path d="M6.5 10.7V15c0 1.7 2.5 3 5.5 3s5.5-1.3 5.5-3v-4.3M21 8.5V15"/></svg>
+        </div>
+        <h3><span lang="fr">Professeur d'université</span><span lang="en">University Professor</span></h3>
         <p>
-          I contribute to several interdisciplinary research projects and assist with the collection,
-          analysis and interpretation of data. My current roles span institutions across Montréal
-          and Trois‑Rivières.
+          <span lang="fr">Quatre années d'enseignement continu à l'UQAM, du 1<sup>er</sup> au 3<sup>e</sup> cycle, comme <strong>chargé de cours</strong> et auxiliaire d'enseignement. Formateur en <strong>écoles d'été internationales</strong> de sociologie quantitative et computationnelle (Montréal 2023, Ouagadougou 2025). Programme de recherche autonome, financé et publiant.</span>
+          <span lang="en">Four years of continuous teaching at UQAM, from undergraduate to doctoral level, as <strong>lecturer</strong> and teaching assistant. Instructor in <strong>international summer schools</strong> on quantitative and computational sociology (Montreal 2023, Ouagadougou 2025). An autonomous, funded and publishing research programme.</span>
         </p>
-        <h3>Research Experience</h3>
+        <ul class="card__tags">
+          <li><span lang="fr">Méthodes quantitatives</span><span lang="en">Quantitative methods</span></li>
+          <li><span lang="fr">Modélisation appliquée</span><span lang="en">Applied modelling</span></li>
+          <li><span lang="fr">Démographie</span><span lang="en">Demography</span></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5M9 11h4M11 9v4"/></svg>
+        </div>
+        <h3><span lang="fr">Chercheur</span><span lang="en">Researcher</span></h3>
+        <p>
+          <span lang="fr">Huit articles publiés dans des revues internationales à comité de lecture (<em>Journal of Population Research</em>, <em>Campbell Systematic Reviews</em>, <em>JCPP</em>, <em>BMC Psychology</em>…), boursier du <strong>FRQSC</strong>, évaluateur pour des revues, et collaborations actives avec l'UQAM, l'Université de Montréal, l'UQTR et la Chaire UNESCO-PREV.</span>
+          <span lang="en">Eight articles published in international peer-reviewed journals (<em>Journal of Population Research</em>, <em>Campbell Systematic Reviews</em>, <em>JCPP</em>, <em>BMC Psychology</em>…), <strong>FRQSC</strong> fellow, journal reviewer, and active collaborations with UQAM, Université de Montréal, UQTR and the UNESCO-PREV Chair.</span>
+        </p>
+        <ul class="card__tags">
+          <li><span lang="fr">Inférence causale</span><span lang="en">Causal inference</span></li>
+          <li><span lang="fr">Santé des populations</span><span lang="en">Population health</span></li>
+          <li><span lang="fr">Méta-analyse</span><span lang="en">Meta-analysis</span></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V12M9.3 20V6M14.7 20v-6M20 20V9"/></svg>
+        </div>
+        <h3><span lang="fr">Consultant en méthodes quantitatives</span><span lang="en">Quantitative Methods Consultant</span></h3>
+        <p>
+          <span lang="fr">Analyste-conseil à l'<strong>Institut de la statistique du Québec</strong> et démographe-conseil auprès du ministère camerounais de l'Économie et de l'Aménagement du territoire. Traitement d'enquêtes complexes (EDS/DHS), plans de sondage, estimation, modélisation prédictive et restitution des résultats aux décideurs.</span>
+          <span lang="en">Consulting analyst at the <strong>Institut de la statistique du Québec</strong> and consulting demographer for Cameroon's Ministry of Economy and Regional Planning. Complex survey processing (DHS), sampling designs, estimation, predictive modelling, and translating results for decision-makers.</span>
+        </p>
+        <ul class="card__tags">
+          <li><span lang="fr">Enquêtes &amp; sondages</span><span lang="en">Surveys &amp; sampling</span></li>
+          <li><span lang="fr">Machine learning</span><span lang="en">Machine learning</span></li>
+          <li><span lang="fr">R · Python · Stata</span><span lang="en">R · Python · Stata</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ RECHERCHE ══════════ -->
+<section id="recherche" class="sec sec--alt">
+  <div class="wrap">
+    <p class="sec__kicker"><span lang="fr">Programme de recherche</span><span lang="en">Research programme</span></p>
+    <h2 class="sec__title"><span lang="fr">Ce que je cherche à comprendre</span><span lang="en">What I seek to understand</span></h2>
+
+    <div class="split">
+      <div class="split__main">
+        <p lang="fr">Ma recherche porte sur les <strong>inégalités sociales de santé</strong> dans les pays à revenu faible et intermédiaire, avec un accent particulier sur l'Afrique subsaharienne. Je m'intéresse à une question simple mais difficile à mesurer : <em>dans quelle mesure la position sociale des femmes — leur autonomie, leur exposition à la violence, leur pouvoir de décision — détermine-t-elle la survie de leurs enfants ?</em></p>
+        <p lang="fr">Ma thèse, dirigée par le professeur <strong>Visseho Adjiwanou</strong> à l'UQAM, y répond en faisant dialoguer deux traditions rarement mises en contact : les <strong>modèles statistiques classiques</strong> (analyse de survie, modèles multiniveaux, décomposition) et les <strong>modèles d'apprentissage automatique</strong> (forêts aléatoires multiniveaux, apprentissage causal). L'objectif n'est pas de remplacer les uns par les autres, mais de montrer ce que chacun révèle — et ce que chacun masque.</p>
+        <p lang="fr">Ce travail s'étend à un second axe, développé au sein de la <strong>Chaire UNESCO-PREV</strong> et de l'Université de Montréal : la mesure des trajectoires de <strong>polarisation sociale et de radicalisation chez les adolescents</strong>, par analyse en profils latents, analyse de transition latente et méta-analyse.</p>
+
+        <p lang="en">My research addresses <strong>social inequalities in health</strong> in low- and middle-income countries, with a particular focus on sub-Saharan Africa. It starts from a simple but hard-to-measure question: <em>to what extent does women's social position — their autonomy, their exposure to violence, their decision-making power — determine their children's survival?</em></p>
+        <p lang="en">My doctoral thesis, supervised by Professor <strong>Visseho Adjiwanou</strong> at UQAM, answers it by bringing two rarely connected traditions into dialogue: <strong>conventional statistical models</strong> (survival analysis, multilevel models, decomposition) and <strong>machine learning models</strong> (multilevel random forests, causal learning). The point is not to replace one with the other, but to show what each reveals — and what each conceals.</p>
+        <p lang="en">A second strand, developed within the <strong>UNESCO-PREV Chair</strong> and Université de Montréal, measures trajectories of <strong>social polarisation and radicalisation among adolescents</strong>, using latent profile analysis, latent transition analysis and meta-analysis.</p>
+      </div>
+
+      <aside class="thesis">
+        <p class="thesis__label"><span lang="fr">Thèse de doctorat</span><span lang="en">Doctoral thesis</span></p>
+        <p class="thesis__title" lang="fr">Inégalités, normes de genre et mortalité des enfants de moins de cinq ans au Cameroun : apport croisé des modèles statistiques conventionnels et des modèles d'apprentissage automatique</p>
+        <p class="thesis__title" lang="en">Inequalities, gender norms and under-five mortality in Cameroon: cross-contribution of conventional statistical models and machine learning models</p>
+        <dl class="thesis__meta">
+          <dt><span lang="fr">Direction</span><span lang="en">Supervisor</span></dt>
+          <dd>Pr Visseho Adjiwanou, UQAM</dd>
+          <dt><span lang="fr">Soutenance prévue</span><span lang="en">Expected defence</span></dt>
+          <dd><span lang="fr">Automne 2026</span><span lang="en">Fall 2026</span></dd>
+          <dt><span lang="fr">Financement</span><span lang="en">Funding</span></dt>
+          <dd>FRQSC, 2024–2026</dd>
+          <dt><span lang="fr">Données</span><span lang="en">Data</span></dt>
+          <dd><span lang="fr">EDS Cameroun 2011 &amp; 2018</span><span lang="en">Cameroon DHS 2011 &amp; 2018</span></dd>
+        </dl>
+      </aside>
+    </div>
+
+    <h3 class="sub"><span lang="fr">Axes de recherche</span><span lang="en">Research interests</span></h3>
+    <ul class="axes">
+      <li><span lang="fr">Épidémiologie sociale et santé des populations</span><span lang="en">Social epidemiology and population health</span></li>
+      <li><span lang="fr">Déterminants sociaux de la santé et inégalités</span><span lang="en">Social determinants of health and health inequalities</span></li>
+      <li><span lang="fr">Normes de genre et violences faites aux femmes</span><span lang="en">Gender norms and violence against women</span></li>
+      <li><span lang="fr">Inférence causale et méthodes quantitatives</span><span lang="en">Causal inference and quantitative methods</span></li>
+      <li><span lang="fr">Analyse de survie et parcours de vie</span><span lang="en">Survival analysis and life course research</span></li>
+      <li><span lang="fr">Science des données appliquée aux sciences sociales</span><span lang="en">Data science applied to the social sciences</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════ EXPERTISE ══════════ -->
+<section id="expertise" class="sec">
+  <div class="wrap">
+    <p class="sec__kicker"><span lang="fr">Compétences</span><span lang="en">Skills</span></p>
+    <h2 class="sec__title"><span lang="fr">Boîte à outils méthodologique</span><span lang="en">Methodological toolkit</span></h2>
+
+    <div class="skills">
+      <div class="skillblk">
+        <h3><span lang="fr">Modélisation statistique</span><span lang="en">Statistical modelling</span></h3>
         <ul>
-          <li>Research Assistant – University of Montréal (2023–present). Supervisor: Diana Miconi.</li>
-          <li>Research Assistant – University of Quebec at Trois‑Rivières (2022–present). Supervisor: Pablo Madriaza.</li>
-          <li>Research Assistant – University of Quebec at Montréal (2022–2024). Supervisor: Vissého Adjiwanou.</li>
+          <li><span lang="fr">Analyse de survie (Cox, modèles à risques concurrents, temps discret)</span><span lang="en">Survival analysis (Cox, competing risks, discrete-time)</span></li>
+          <li><span lang="fr">Modèles multiniveaux et à effets mixtes</span><span lang="en">Multilevel and mixed-effects models</span></li>
+          <li><span lang="fr">Modèles linéaires généralisés, modélisation linéaire appliquée</span><span lang="en">Generalised linear models, applied linear modelling</span></li>
+          <li><span lang="fr">Décomposition des inégalités, indices de concentration</span><span lang="en">Inequality decomposition, concentration indices</span></li>
         </ul>
       </div>
-    </section>
-    <!-- Publications Section -->
-    <section id="publications" class="section bg-light">
-      <div class="container">
-        <h2>Publications</h2>
-        <h3>Peer‑Reviewed Papers</h3>
+
+      <div class="skillblk">
+        <h3><span lang="fr">Inférence causale</span><span lang="en">Causal inference</span></h3>
         <ul>
-          <li>
-            Madriaza, P., Hassan, G., Brouillette‑Alarie, S., <strong>Mounchingam, A.N.</strong>, Durocher‑Corfa, L., Borokhovski, E., Pickup, D., &amp; Paillé, S. (2025). Exposure to hate in online and traditional media: A systematic review and meta‑analysis of the impact of this exposure on individuals and communities. <em>Campbell Systematic Reviews</em>, 0, e70018.
-          </li>
-          <li>
-            <strong>Mounchingam, A.N.</strong> &amp; Golaz, V. (2024). Impact des cyclones sur la morbidité et malnutrition des enfants de moins de cinq ans à Madagascar. In <em>Regards démographiques sur quelques crises climatiques</em> (pp. 63‑86).
-          </li>
-          <li>
-            Miconi, D., <strong>Mounchingam, A.N.</strong>, Zambelli, M., &amp; Rousseau, C. (2024). Disentangling support for violent and non‑violent radicalization among adolescents: A latent profile analysis. <em>Journal of Youth and Adolescence</em>.
-          </li>
-          <li>
-            Miconi, D., Santavicca, T., Frounfelker, R.L., <strong>Mounchingam, A.N.</strong>, &amp; Rousseau, C. (2024). Digital media use, depressive symptoms and support for violent radicalization among young Canadians: A latent profile analysis. <em>BMC Psychology</em>, 12(1).
-          </li>
-          <li>
-            Rwenge Mburano, J.‑R., &amp; <strong>Mounchingam, A.N.</strong> (2021). Individual, family and contextual determinants of malnutrition among children under five in Cameroon. <em>Biostatistics and Health Sciences</em>, 2(2), 1‑27.
-          </li>
-        </ul>
-        <h3>Work in Progress</h3>
-        <ul>
-          <li>The effect of gender inequalities experienced by mothers on under‑five mortality in Cameroon (minor revision). Co‑author: Vissého Adjiwanou.</li>
-          <li>Identifying risk profiles of under‑five mortality in Cameroon using machine‑learning models (submitted). Co‑author: Vissého Adjiwanou.</li>
-          <li>Gender norms and under‑five mortality in Cameroon: contribution of multilevel random forest models (submitted). Co‑author: Vissého Adjiwanou.</li>
-          <li>Away from violence: a latent transition analysis on support for violent and non‑violent radicalization among adolescents (submitted). Co‑authors: Diana Miconi, Michela Zambelli &amp; Cécile Rousseau.</li>
-        </ul>
-        <h3>Reports</h3>
-        <ul>
-          <li>
-            Madriaza, P., Morin, D., Durocher‑Corfa, L., Sarrazin, P., Njingouo, A. &amp; Bédard, S. (2024). Systematic review of evaluation methods for violent extremism prevention programmes: update and 2020–2022 perspectives. UNESCO Chair in the Prevention of Violent Radicalization and Extremism.
-          </li>
-          <li>
-            Miconi, D. <em>et al.</em> (2024). Social polarization in secondary schools: how to promote well‑being and reduce violence among adolescents. Final research report. SSHRC.
-          </li>
-          <li>
-            Miconi, D. <em>et al.</em> (2023). Social polarization in secondary schools: how to promote well‑being and reduce violence among adolescents. Social Sciences and Humanities Research Council of Canada.
-          </li>
+          <li><span lang="fr">Graphes acycliques dirigés (DAG) et identification</span><span lang="en">Directed acyclic graphs (DAGs) and identification</span></li>
+          <li><span lang="fr">Pondération et appariement sur score de propension</span><span lang="en">Propensity score weighting and matching</span></li>
+          <li><span lang="fr">Analyse de médiation et de modération</span><span lang="en">Mediation and moderation analysis</span></li>
+          <li><span lang="fr">Analyses de sensibilité aux biais non mesurés</span><span lang="en">Sensitivity analysis for unmeasured confounding</span></li>
         </ul>
       </div>
-    </section>
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-      <div class="container">
-        <h2>Professional Experience</h2>
+
+      <div class="skillblk">
+        <h3><span lang="fr">Apprentissage automatique</span><span lang="en">Machine learning</span></h3>
         <ul>
-          <li>Advisor Analyst – Institute of Quebec Statistics (2024–present).</li>
-          <li>Statistical Engineer &amp; Demographer – Ministry of Economics, Cameroon (2021–2024).</li>
+          <li><span lang="fr">Forêts aléatoires, forêts aléatoires multiniveaux, gradient boosting</span><span lang="en">Random forests, multilevel random forests, gradient boosting</span></li>
+          <li><span lang="fr">Interprétabilité des modèles (importance des variables, SHAP, PDP)</span><span lang="en">Model interpretability (variable importance, SHAP, PDP)</span></li>
+          <li><span lang="fr">Apprentissage non supervisé et stratification empirique</span><span lang="en">Unsupervised learning and empirical stratification</span></li>
+          <li><span lang="fr">Validation croisée, rééchantillonnage, calibration</span><span lang="en">Cross-validation, resampling, calibration</span></li>
         </ul>
       </div>
-    </section>
-    <!-- Teaching Section -->
-    <section id="teaching" class="section bg-light">
-      <div class="container">
-        <h2>Teaching</h2>
+
+      <div class="skillblk">
+        <h3><span lang="fr">Modèles à variables latentes</span><span lang="en">Latent variable models</span></h3>
         <ul>
-          <li>Computational Social Science (Ph.D. level) – Teaching assistant, Summer School (SICCS), Montréal &amp; Ouagadougou, Summer 2023, Summer 2025.</li>
-          <li>Quantitative Methods in Sociology (Undergraduate) – Lecturer, University of Quebec at Montréal, Winter 2025.</li>
-          <li>Quantitative Methods in Sociology (Undergraduate) – Teaching assistant, UQAM, Winter 2022, Winter 2023, Winter 2024.</li>
-          <li>Advanced Quantitative Methods in Sociology (Graduate &amp; Ph.D. level) – Teaching assistant, UQAM, Fall 2023, Fall 2024.</li>
-          <li>Applied Linear Models, Analysis Initiation, Differential Calculus (Undergraduate) – Teaching assistant, UQAM, Fall 2022, Winter 2023.</li>
-          <li>Mathematics (secondary level) – Full‑time teacher, Kagnol College (2015–2020).</li>
+          <li><span lang="fr">Analyse en profils latents (LPA) et en classes latentes (LCA)</span><span lang="en">Latent profile (LPA) and latent class analysis (LCA)</span></li>
+          <li><span lang="fr">Analyse de transition latente (LTA)</span><span lang="en">Latent transition analysis (LTA)</span></li>
+          <li><span lang="fr">Modèles d'équations structurelles</span><span lang="en">Structural equation modelling</span></li>
+          <li><span lang="fr">Psychométrie, validation d'échelles, invariance de mesure</span><span lang="en">Psychometrics, scale validation, measurement invariance</span></li>
         </ul>
       </div>
-    </section>
-    <!-- Awards Section -->
-    <section id="awards" class="section">
-      <div class="container">
-        <h2>Grants, Awards &amp; Fellowships</h2>
+
+      <div class="skillblk">
+        <h3><span lang="fr">Démographie &amp; enquêtes</span><span lang="en">Demography &amp; surveys</span></h3>
         <ul>
-          <li>Ph.D. Scholarship, Fonds de recherche du Québec – Society and Culture (FRQSC), ranked 1st (2024–2026).</li>
-          <li>Archimedes Mathematics‑Computer Science Excellence Scholarship, Archimedes Institute (2020–2021).</li>
-          <li>International Association of French‑Speaking Demographers Travel Grant (May 2022).</li>
-          <li>Grant Excellence Award, IFORD‑Yaoundé (2018–2020).</li>
+          <li><span lang="fr">Enquêtes démographiques et de santé (EDS/DHS), MICS</span><span lang="en">Demographic and Health Surveys (DHS), MICS</span></li>
+          <li><span lang="fr">Plans de sondage complexes, pondérations, estimation de variance</span><span lang="en">Complex survey designs, weighting, variance estimation</span></li>
+          <li><span lang="fr">Estimation de la mortalité, tables de survie, projections</span><span lang="en">Mortality estimation, life tables, projections</span></li>
+          <li><span lang="fr">Revue systématique et méta-analyse</span><span lang="en">Systematic review and meta-analysis</span></li>
         </ul>
       </div>
-    </section>
-    <!-- Skills Section -->
-    <section id="skills" class="section bg-light">
-      <div class="container">
-        <h2>Programming Skills</h2>
-        <p>R, SAS, STATA</p>
+
+      <div class="skillblk">
+        <h3><span lang="fr">Outils</span><span lang="en">Tools</span></h3>
+        <ul class="tools">
+          <li>R</li><li>Python</li><li>Stata</li><li>SPSS</li><li>Mplus</li><li>LaTeX</li><li>Quarto / R&nbsp;Markdown</li><li>Git</li><li>SQL</li>
+        </ul>
+        <p class="note">
+          <span lang="fr">Rédaction reproductible et partage du code : chaque analyse publiée est accompagnée de scripts documentés.</span>
+          <span lang="en">Reproducible writing and code sharing: every published analysis comes with documented scripts.</span>
+        </p>
       </div>
-    </section>
-    <!-- Languages Section -->
-    <section id="languages" class="section">
-      <div class="container">
-        <h2>Languages</h2>
-        <p>French (native), English (upper‑intermediate)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PUBLICATIONS ══════════ -->
+<section id="publications" class="sec sec--alt">
+  <div class="wrap">
+    <p class="sec__kicker"><span lang="fr">Production scientifique</span><span lang="en">Scholarly output</span></p>
+    <h2 class="sec__title"><span lang="fr">Publications</span><span lang="en">Publications</span></h2>
+
+    <div class="filters" role="tablist">
+      <button class="is-on" data-filter="all"><span lang="fr">Tout</span><span lang="en">All</span></button>
+      <button data-filter="article"><span lang="fr">Articles évalués (8)</span><span lang="en">Peer-reviewed (8)</span></button>
+      <button data-filter="progress"><span lang="fr">En évaluation (3)</span><span lang="en">Under review (3)</span></button>
+      <button data-filter="report"><span lang="fr">Rapports (4)</span><span lang="en">Reports (4)</span></button>
+    </div>
+
+    <ol class="pubs">
+
+      <li class="pub" data-type="article">
+        <span class="pub__year">2026</span>
+        <div class="pub__body">
+          <p class="pub__cite">Miconi, D., Zambelli, M., <b>Mounchingam, A.&nbsp;N.</b>, &amp; Rousseau, C. (2026). Hybrid ideologies and glorification of violence during adolescence: Links to support for violent and nonviolent radicalization.</p>
+          <p class="pub__venue"><em>Journal of Research on Adolescence</em>, 36, e70203.</p>
+          <a class="doi" href="https://doi.org/10.1111/jora.70203" target="_blank" rel="noopener">doi.org/10.1111/jora.70203</a>
+        </div>
+      </li>
+
+      <li class="pub" data-type="article">
+        <span class="pub__year">2026</span>
+        <div class="pub__body">
+          <p class="pub__cite">Miconi, D., Zambelli, M., <b>Mounchingam, A.&nbsp;N.</b>, &amp; Rousseau, C. (2026). Away from violence: A latent transition analysis on support for violent and non-violent radicalization among adolescents.</p>
+          <p class="pub__venue"><em>Journal of Child Psychology and Psychiatry</em>.</p>
+        </div>
+      </li>
+
+      <li class="pub pub--flag" data-type="article">
+        <span class="pub__year">2025</span>
+        <div class="pub__body">
+          <p class="pub__badge"><span lang="fr">Premier auteur</span><span lang="en">First author</span></p>
+          <p class="pub__cite"><b>Mounchingam, A.&nbsp;N.</b>, &amp; Adjiwanou, V. (2025). The effect of gender inequalities experienced by mothers on the under-five mortality in Cameroon between 2011 and 2018.</p>
+          <p class="pub__venue"><em>Journal of Population Research</em>, 42, 52.</p>
+          <a class="doi" href="https://doi.org/10.1007/s12546-025-09397-8" target="_blank" rel="noopener">doi.org/10.1007/s12546-025-09397-8</a>
+        </div>
+      </li>
+
+      <li class="pub" data-type="article">
+        <span class="pub__year">2025</span>
+        <div class="pub__body">
+          <p class="pub__cite">Madriaza, P., Hassan, G., Brouillette-Alarie, S., <b>Mounchingam, A.&nbsp;N.</b>, et al. (2025). Exposure to hate in online and traditional media: A systematic review and meta-analysis.</p>
+          <p class="pub__venue"><em>Campbell Systematic Reviews</em>, e70018.</p>
+          <a class="doi" href="https://doi.org/10.1002/cl2.70018" target="_blank" rel="noopener">doi.org/10.1002/cl2.70018</a>
+        </div>
+      </li>
+
+      <li class="pub pub--flag" data-type="article">
+        <span class="pub__year">2024</span>
+        <div class="pub__body">
+          <p class="pub__badge"><span lang="fr">Premier auteur · Chapitre d'ouvrage</span><span lang="en">First author · Book chapter</span></p>
+          <p class="pub__cite"><b>Njingouo Mounchingam, A.</b>, &amp; Golaz, V. (2024). Impact of cyclones on morbidity and malnutrition among children under five in Madagascar.</p>
+          <p class="pub__venue"><em>Demographic perspectives on several climate crises</em>, pp.&nbsp;63–86.</p>
+        </div>
+      </li>
+
+      <li class="pub" data-type="article">
+        <span class="pub__year">2024</span>
+        <div class="pub__body">
+          <p class="pub__cite">Miconi, D., <b>Njingouo Mounchingam, A.</b>, Zambelli, M., &amp; Rousseau, C. (2024). Disentangling support for violent and nonviolent radicalization among adolescents: A latent profile analysis.</p>
+          <p class="pub__venue"><em>Journal of Youth and Adolescence</em>.</p>
+        </div>
+      </li>
+
+      <li class="pub" data-type="article">
+        <span class="pub__year">2024</span>
+        <div class="pub__body">
+          <p class="pub__cite">Miconi, D., Santavicca, T., Frounfelker, R.&nbsp;L., <b>Njingouo Mounchingam, A.</b>, &amp; Rousseau, C. (2024). Digital media use, depressive symptoms and support for violent radicalization among young Canadians: A latent profile analysis.</p>
+          <p class="pub__venue"><em>BMC Psychology</em>, 12(1).</p>
+        </div>
+      </li>
+
+      <li class="pub" data-type="article">
+        <span class="pub__year">2021</span>
+        <div class="pub__body">
+          <p class="pub__cite">Rwenge Mburano, J.-R., &amp; <b>Njingouo Mounchingam, A.</b> (2021). Individual, family and contextual determinants of malnutrition among children under five in Cameroon.</p>
+          <p class="pub__venue"><em>Biostatistics and Health Sciences</em>, 2(2), 1–27.</p>
+          <a class="doi" href="https://doi.org/10.21494/ISTE.OP.2021.0728" target="_blank" rel="noopener">doi.org/10.21494/ISTE.OP.2021.0728</a>
+        </div>
+      </li>
+
+      <!-- ── Travaux en cours ── -->
+      <li class="pub" data-type="progress">
+        <span class="pub__year"><span lang="fr">En éval.</span><span lang="en">Review</span></span>
+        <div class="pub__body">
+          <p class="pub__badge"><span lang="fr">Révisé et resoumis — SSM-Population Health</span><span lang="en">Revised and resubmitted — SSM-Population Health</span></p>
+          <p class="pub__cite"><b>Mounchingam, A.&nbsp;N.</b>, &amp; Adjiwanou, V. Empirical vulnerability strata in under-five mortality in Cameroon: Evidence from DHS data.</p>
+        </div>
+      </li>
+
+      <li class="pub" data-type="progress">
+        <span class="pub__year"><span lang="fr">En éval.</span><span lang="en">Review</span></span>
+        <div class="pub__body">
+          <p class="pub__badge"><span lang="fr">Soumis</span><span lang="en">Submitted</span></p>
+          <p class="pub__cite"><b>Mounchingam, A.&nbsp;N.</b>, &amp; Adjiwanou, V. Gender norms and under-five mortality in Cameroon: Contribution of multilevel random forest.</p>
+        </div>
+      </li>
+
+      <li class="pub" data-type="progress">
+        <span class="pub__year"><span lang="fr">En éval.</span><span lang="en">Review</span></span>
+        <div class="pub__body">
+          <p class="pub__badge"><span lang="fr">Révisé et resoumis — Cahiers québécois de démographie</span><span lang="en">Revised and resubmitted — Cahiers québécois de démographie</span></p>
+          <p class="pub__cite"><b>Mounchingam, A.&nbsp;N.</b>, &amp; Adjiwanou, V. When gender norms influence choices: A multilevel random forest analysis of modern contraceptive use in Cameroon.</p>
+        </div>
+      </li>
+
+      <!-- ── Rapports ── -->
+      <li class="pub" data-type="report">
+        <span class="pub__year">2025</span>
+        <div class="pub__body">
+          <p class="pub__cite">Caron, P.-O., Béland, S., Achim, A., Arel-Bundock, V., … <b>Njingouo Mounchingam, A.</b>, Théroux, J., &amp; Vissandjée, B. (2025). Compte rendu du colloque « Méthodes quantitatives en sciences humaines et santé (MQSHS) 2025 ».</p>
+          <p class="pub__venue"><em>The Quantitative Methods for Psychology</em>, 21(3), 108–114.</p>
+          <a class="doi" href="https://doi.org/10.20982/tqmp.21.3.p108" target="_blank" rel="noopener">doi.org/10.20982/tqmp.21.3.p108</a>
+        </div>
+      </li>
+
+      <li class="pub" data-type="report">
+        <span class="pub__year">2024</span>
+        <div class="pub__body">
+          <p class="pub__cite">Madriaza, P., Morin, D., Durocher-Corfa, L., Sarrazin, P., <b>Njingouo, A.</b>, &amp; Bédard, S. (2024). Systematic review of evaluation methods for violent extremism prevention programs: Update and 2020–2022 perspectives.</p>
+          <p class="pub__venue"><span lang="fr">Chaire UNESCO en prévention de la radicalisation et de l'extrémisme violents (UNESCO-PREV).</span><span lang="en">UNESCO Chair in the Prevention of Violent Radicalization and Extremism.</span></p>
+        </div>
+      </li>
+
+      <li class="pub" data-type="report">
+        <span class="pub__year">2024</span>
+        <div class="pub__body">
+          <p class="pub__cite">Miconi, D., et coll. (2024). Social polarization in secondary schools: Promoting well-being and reducing violence among adolescents. <span lang="fr">Rapport final de recherche, 82&nbsp;p.</span><span lang="en">Final research report, 82&nbsp;pp.</span></p>
+          <p class="pub__venue">CRSH / SSHRC.</p>
+        </div>
+      </li>
+
+      <li class="pub" data-type="report">
+        <span class="pub__year">2023</span>
+        <div class="pub__body">
+          <p class="pub__cite">Miconi, D., et coll. (2023). Social polarization in secondary schools: How to promote well-being and reduce violence among adolescents. <span lang="fr">Rapport, 66&nbsp;p.</span><span lang="en">Report, 66&nbsp;pp.</span></p>
+          <p class="pub__venue">CRSH / SSHRC.</p>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ ENSEIGNEMENT ══════════ -->
+<section id="enseignement" class="sec">
+  <div class="wrap">
+    <p class="sec__kicker"><span lang="fr">Enseignement</span><span lang="en">Teaching</span></p>
+    <h2 class="sec__title"><span lang="fr">Former à la rigueur quantitative</span><span lang="en">Training in quantitative rigour</span></h2>
+    <p class="sec__lead">
+      <span lang="fr">Quatre cours différents, du premier cycle au doctorat, sur quatre années consécutives — dont un dispensé comme chargé de cours responsable, et deux écoles d'été internationales.</span>
+      <span lang="en">Four distinct courses, from undergraduate to doctoral level, over four consecutive years — including one taught as instructor of record, and two international summer schools.</span>
+    </p>
+
+    <div class="tablewrap">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th><span lang="fr">Cours</span><span lang="en">Course</span></th>
+            <th><span lang="fr">Niveau</span><span lang="en">Level</span></th>
+            <th><span lang="fr">Rôle</span><span lang="en">Role</span></th>
+            <th><span lang="fr">Institution &amp; période</span><span lang="en">Institution &amp; period</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span lang="fr">Méthodes quantitatives en sociologie</span><span lang="en">Quantitative Methods in Sociology</span></td>
+            <td><span lang="fr">1<sup>er</sup> cycle</span><span lang="en">Undergraduate</span></td>
+            <td class="hi"><span lang="fr">Chargé de cours</span><span lang="en">Lecturer</span></td>
+            <td><span lang="fr">UQAM · Hiver 2025</span><span lang="en">UQAM · Winter 2025</span></td>
+          </tr>
+          <tr>
+            <td><span lang="fr">Sociologie quantitative et computationnelle</span><span lang="en">Quantitative and Computational Sociology</span></td>
+            <td><span lang="fr">3<sup>e</sup> cycle</span><span lang="en">Postgraduate</span></td>
+            <td><span lang="fr">Auxiliaire d'enseignement</span><span lang="en">Teaching assistant</span></td>
+            <td><span lang="fr">École d'été — Montréal 2023, Ouagadougou 2025</span><span lang="en">Summer school — Montreal 2023, Ouagadougou 2025</span></td>
+          </tr>
+          <tr>
+            <td><span lang="fr">Méthodes quantitatives avancées en sociologie</span><span lang="en">Advanced Quantitative Methods in Sociology</span></td>
+            <td><span lang="fr">2<sup>e</sup> et 3<sup>e</sup> cycles</span><span lang="en">Graduate &amp; postgraduate</span></td>
+            <td><span lang="fr">Auxiliaire d'enseignement</span><span lang="en">Teaching assistant</span></td>
+            <td><span lang="fr">UQAM · Automne 2023, 2024, 2025</span><span lang="en">UQAM · Fall 2023, 2024, 2025</span></td>
+          </tr>
+          <tr>
+            <td><span lang="fr">Méthodes quantitatives en sociologie</span><span lang="en">Quantitative Methods in Sociology</span></td>
+            <td><span lang="fr">1<sup>er</sup> cycle</span><span lang="en">Undergraduate</span></td>
+            <td><span lang="fr">Auxiliaire d'enseignement</span><span lang="en">Teaching assistant</span></td>
+            <td><span lang="fr">UQAM · Hiver 2022, 2023, 2024</span><span lang="en">UQAM · Winter 2022, 2023, 2024</span></td>
+          </tr>
+          <tr>
+            <td><span lang="fr">Modélisation linéaire appliquée et analyse différentielle</span><span lang="en">Applied Linear Modelling and Differential Analysis</span></td>
+            <td><span lang="fr">1<sup>er</sup> cycle</span><span lang="en">Undergraduate</span></td>
+            <td><span lang="fr">Auxiliaire d'enseignement</span><span lang="en">Teaching assistant</span></td>
+            <td><span lang="fr">UQAM · Automne 2022, Hiver 2023</span><span lang="en">UQAM · Fall 2022, Winter 2023</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">
+      <span lang="fr">Également moniteur de cycles supérieurs au Département de sociologie de l'UQAM (2022–2025) : accompagnement méthodologique individuel des étudiantes et étudiants de maîtrise et de doctorat.</span>
+      <span lang="en">Also graduate monitor in UQAM's Department of Sociology (2022–2025): one-on-one methodological support for master's and doctoral students.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ PARCOURS ══════════ -->
+<section id="parcours" class="sec sec--alt">
+  <div class="wrap">
+    <p class="sec__kicker"><span lang="fr">Parcours</span><span lang="en">Background</span></p>
+    <h2 class="sec__title"><span lang="fr">Formation et expérience</span><span lang="en">Education and experience</span></h2>
+
+    <div class="two">
+      <div>
+        <h3 class="sub"><span lang="fr">Formation</span><span lang="en">Education</span></h3>
+        <ol class="tl">
+          <li>
+            <span class="tl__date">2021 — 2026</span>
+            <h4><span lang="fr">Doctorat en sociologie</span><span lang="en">PhD in Sociology</span></h4>
+            <p class="tl__org"><span lang="fr">Université du Québec à Montréal (UQAM), Canada</span><span lang="en">Université du Québec à Montréal (UQAM), Canada</span></p>
+            <p class="tl__note"><span lang="fr">Soutenance prévue à l'automne 2026 · Direction : Pr Visseho Adjiwanou</span><span lang="en">Expected defence Fall 2026 · Supervisor: Prof. Visseho Adjiwanou</span></p>
+          </li>
+          <li>
+            <span class="tl__date">2025 — 2026</span>
+            <h4><span lang="fr">Maîtrise en science des données</span><span lang="en">Master's in Data Science</span></h4>
+            <p class="tl__org">HEC Montréal, Canada</p>
+            <p class="tl__note"><span lang="fr">Obtention prévue à l'automne 2026</span><span lang="en">Expected completion Fall 2026</span></p>
+          </li>
+          <li>
+            <span class="tl__date">2020 — 2021</span>
+            <h4><span lang="fr">Maîtrise en statistique appliquée aux sciences sociales</span><span lang="en">Master's in Statistics Applied to the Social Sciences</span></h4>
+            <p class="tl__org"><span lang="fr">Aix-Marseille Université, France</span><span lang="en">Aix-Marseille University, France</span></p>
+            <p class="tl__note"><span lang="fr">Bourse d'excellence Archimède en mathématiques et informatique</span><span lang="en">Archimedes Excellence Scholarship in Mathematics and Computer Science</span></p>
+          </li>
+          <li>
+            <span class="tl__date">2018 — 2020</span>
+            <h4><span lang="fr">Maîtrise en démographie</span><span lang="en">Master's in Demography</span></h4>
+            <p class="tl__org"><span lang="fr">Institut de formation et de recherche démographiques (IFORD), Cameroun</span><span lang="en">Institute of Training and Demographic Research (IFORD), Cameroon</span></p>
+            <p class="tl__note"><span lang="fr">Prix d'excellence IFORD, 2018–2020</span><span lang="en">IFORD Award of Excellence, 2018–2020</span></p>
+          </li>
+        </ol>
       </div>
-    </section>
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-light">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:njingouo_mounchingam.aoudou@courrier.uqam.ca">njingouo_mounchingam.aoudou@courrier.uqam.ca</a></p>
-        <p>Phone: +1&nbsp;(438)&nbsp;920‑2481</p>
-        <p><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn Profile</a></p>
+
+      <div>
+        <h3 class="sub"><span lang="fr">Expérience professionnelle</span><span lang="en">Professional experience</span></h3>
+        <ol class="tl">
+          <li>
+            <span class="tl__date"><span lang="fr">2024 — aujourd'hui</span><span lang="en">2024 — present</span></span>
+            <h4><span lang="fr">Analyste-conseil</span><span lang="en">Consulting Analyst</span></h4>
+            <p class="tl__org"><span lang="fr">Institut de la statistique du Québec</span><span lang="en">Institut de la statistique du Québec</span></p>
+          </li>
+          <li>
+            <span class="tl__date">2023 — 2025</span>
+            <h4><span lang="fr">Assistant de recherche et coordonnateur</span><span lang="en">Research Assistant and Coordinator</span></h4>
+            <p class="tl__org"><span lang="fr">Université de Montréal · Supervision : Pre Diana Miconi</span><span lang="en">Université de Montréal · Supervisor: Prof. Diana Miconi</span></p>
+          </li>
+          <li>
+            <span class="tl__date">2022 — 2025</span>
+            <h4><span lang="fr">Moniteur de cycles supérieurs, Département de sociologie</span><span lang="en">Graduate Monitor, Department of Sociology</span></h4>
+            <p class="tl__org">UQAM</p>
+          </li>
+          <li>
+            <span class="tl__date">2022 — 2024</span>
+            <h4><span lang="fr">Assistant de recherche</span><span lang="en">Research Assistant</span></h4>
+            <p class="tl__org"><span lang="fr">Université du Québec à Trois-Rivières · Supervision : Pr Pablo Madriaza</span><span lang="en">Université du Québec à Trois-Rivières · Supervisor: Prof. Pablo Madriaza</span></p>
+          </li>
+          <li>
+            <span class="tl__date">2021 — 2024</span>
+            <h4><span lang="fr">Démographe-conseil</span><span lang="en">Consulting Demographer</span></h4>
+            <p class="tl__org"><span lang="fr">Ministère de l'Économie, de la Planification et de l'Aménagement du territoire, Cameroun</span><span lang="en">Ministry of Economy, Planning and Regional Development, Cameroon</span></p>
+          </li>
+          <li>
+            <span class="tl__date">2015 — 2018</span>
+            <h4><span lang="fr">Enseignant au secondaire</span><span lang="en">High School Teacher</span></h4>
+            <p class="tl__org"><span lang="fr">Collège d'enseignement secondaire Kagnol 1, Cameroun</span><span lang="en">Kagnol Middle School 1, Cameroon</span></p>
+          </li>
+        </ol>
       </div>
-    </section>
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="container">
-        <p>&copy; <script>document.write(new Date().getFullYear());</script> Aoudou Njingouo Mounchingam. All rights reserved.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ RAYONNEMENT ══════════ -->
+<section id="rayonnement" class="sec">
+  <div class="wrap">
+    <p class="sec__kicker"><span lang="fr">Rayonnement</span><span lang="en">Academic service &amp; visibility</span></p>
+    <h2 class="sec__title"><span lang="fr">Communications, distinctions et service</span><span lang="en">Talks, awards and service</span></h2>
+
+    <div class="three">
+
+      <div class="panel">
+        <h3><span lang="fr">Communications scientifiques</span><span lang="en">Conference presentations</span></h3>
+        <ul class="dots">
+          <li><b>2026</b> — <span lang="fr">93<sup>e</sup> Congrès de l'Acfas, UQTR, mai</span><span lang="en">93rd Acfas Congress, UQTR, May</span></li>
+          <li><b>2025</b> — <span lang="fr">Colloque Méthodes quantitatives en sciences humaines et santé, Université de Montréal, juillet</span><span lang="en">Quantitative Methods in the Humanities and Health Sciences, Université de Montréal, July</span></li>
+          <li><b>2025</b> — <span lang="fr">Équipe de recherche en mathématiques appliquées aux sciences sociales — Conférence en l'honneur du Pr Nicolas Gabriel Andjiga, Université de Yaoundé I, juillet</span><span lang="en">Research team in mathematics applied to social sciences — Lecture in honour of Prof. Nicolas Gabriel Andjiga, University of Yaoundé I, July</span></li>
+          <li><b>2024</b> — <span lang="fr">« Demystifying Machine Learning for Social Science Researchers », Max Planck Institute for Demographic Research, Allemagne, novembre</span><span lang="en">“Demystifying Machine Learning for Social Science Researchers”, Max Planck Institute for Demographic Research, Germany, November</span></li>
+          <li><b>2024 · 2025</b> — <span lang="fr">Colloque annuel de l'Association des démographes du Québec, INRS, Montréal</span><span lang="en">Annual Conference of the Association des démographes du Québec, INRS, Montreal</span></li>
+          <li><b>2022</b> — <span lang="fr">Colloque de l'Association internationale des démographes de langue française (AIDELF), Grèce, mai</span><span lang="en">Conference of the International Association of French-Speaking Demographers (AIDELF), Greece, May</span></li>
+        </ul>
       </div>
-    </footer>
-  </body>
+
+      <div class="panel">
+        <h3><span lang="fr">Bourses et distinctions</span><span lang="en">Scholarships and awards</span></h3>
+        <ul class="dots">
+          <li><b>2026</b> — <span lang="fr">Bourse de stage en milieu pratique (BSMP), FRQSC</span><span lang="en">Practical Setting Internship Scholarship (BSMP), FRQSC</span></li>
+          <li><b>2024–2026</b> — <span lang="fr">Bourse doctorale, Fonds de recherche du Québec — Société et culture (FRQSC)</span><span lang="en">Doctoral scholarship, Fonds de recherche du Québec — Société et culture (FRQSC)</span></li>
+          <li><b>2022</b> — <span lang="fr">Bourse de déplacement, AIDELF</span><span lang="en">Travel grant, AIDELF</span></li>
+          <li><b>2020–2021</b> — <span lang="fr">Bourse d'excellence Archimède en mathématiques et informatique, Institut Archimède</span><span lang="en">Archimedes Excellence Scholarship in Mathematics and Computer Science, Archimedes Institute</span></li>
+          <li><b>2018–2020</b> — <span lang="fr">Prix d'excellence, IFORD, Yaoundé</span><span lang="en">Award of Excellence, IFORD, Yaoundé</span></li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h3><span lang="fr">Service à la communauté scientifique</span><span lang="en">Service to the scholarly community</span></h3>
+        <ul class="dots">
+          <li><span lang="fr">Évaluateur — <em>BMC Public Health</em></span><span lang="en">Reviewer — <em>BMC Public Health</em></span></li>
+          <li><span lang="fr">Évaluateur — <em>Cahiers québécois de démographie</em></span><span lang="en">Reviewer — <em>Quebec Journal of Demography</em></span></li>
+          <li><span lang="fr">Coordination d'équipe de recherche (Université de Montréal, 2023–2025)</span><span lang="en">Research team coordination (Université de Montréal, 2023–2025)</span></li>
+          <li><span lang="fr">Encadrement méthodologique aux cycles supérieurs (UQAM, 2022–2025)</span><span lang="en">Graduate methodological mentoring (UQAM, 2022–2025)</span></li>
+        </ul>
+
+        <h3 class="mt"><span lang="fr">Langues</span><span lang="en">Languages</span></h3>
+        <ul class="dots">
+          <li><span lang="fr">Français — langue maternelle</span><span lang="en">French — native</span></li>
+          <li><span lang="fr">Anglais — avancé (recherche, enseignement, publication)</span><span lang="en">English — advanced (research, teaching, publishing)</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact" class="sec sec--dark">
+  <div class="wrap">
+    <p class="sec__kicker"><span lang="fr">Contact</span><span lang="en">Contact</span></p>
+    <h2 class="sec__title"><span lang="fr">Travaillons ensemble</span><span lang="en">Let's work together</span></h2>
+    <p class="sec__lead">
+      <span lang="fr">Je suis ouvert aux postes de professeur, aux stages postdoctoraux, aux collaborations de recherche et aux mandats de consultation en méthodes quantitatives. Écrivez-moi — je réponds rapidement.</span>
+      <span lang="en">I am open to faculty positions, postdoctoral fellowships, research collaborations and quantitative-methods consulting engagements. Write to me — I reply promptly.</span>
+    </p>
+
+    <div class="contact">
+      <a class="contact__item" href="mailto:njingouo_mounchingam.aoudou@courrier.uqam.ca">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+        <span><b><span lang="fr">Courriel académique</span><span lang="en">Academic email</span></b>njingouo_mounchingam.aoudou@courrier.uqam.ca</span>
+      </a>
+
+      <a class="contact__item" href="assets/CV_Aoudou_Njingouo_Mounchingam.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5"/></svg>
+        <span><b>Curriculum vitæ</b><span lang="fr">Version complète (PDF)</span><span lang="en">Full version (PDF)</span></span>
+      </a>
+
+      <a class="contact__item" href="https://github.com/njingouo" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><path d="M9 19c-4.5 1.5-4.5-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+        <span><b>GitHub</b>github.com/njingouo</span>
+      </a>
+
+      <!--
+        ═══ À COMPLÉTER / TO COMPLETE ═══
+        Ajoutez vos identifiants de chercheur ici : ils augmentent fortement votre visibilité
+        auprès des comités de recrutement. Décommentez chaque bloc et remplacez l'URL.
+
+        <a class="contact__item" href="https://scholar.google.com/citations?user=VOTRE_ID" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><path d="m12 4 9 4.5-9 4.5-9-4.5L12 4Z"/><path d="M6.5 10.7V15c0 1.7 2.5 3 5.5 3s5.5-1.3 5.5-3v-4.3"/></svg>
+          <span><b>Google Scholar</b>Citations &amp; indice h</span>
+        </a>
+
+        <a class="contact__item" href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><circle cx="12" cy="12" r="9"/><path d="M9 9v7M9 6.5v.01M13 16V9h2.5a3.5 3.5 0 0 1 0 7H13Z"/></svg>
+          <span><b>ORCID</b>0000-0000-0000-0000</span>
+        </a>
+
+        <a class="contact__item" href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg>
+          <span><b>LinkedIn</b>Profil professionnel</span>
+        </a>
+
+        <a class="contact__item" href="https://www.researchgate.net/profile/VOTRE-PROFIL" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="ic"><circle cx="12" cy="12" r="9"/><path d="M9 16V8h2.5a2 2 0 0 1 0 4H9m3 0 3 4"/></svg>
+          <span><b>ResearchGate</b>Publications</span>
+        </a>
+      -->
+    </div>
+
+    <p class="contact__loc">
+      <span lang="fr">Département de sociologie, Université du Québec à Montréal · Montréal (Québec), Canada · Résident permanent canadien, autorisé à travailler sans restriction.</span>
+      <span lang="en">Department of Sociology, Université du Québec à Montréal · Montreal (Quebec), Canada · Canadian permanent resident, authorised to work without restriction.</span>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p>© <span id="year">2026</span> Aoudou Njingouo Mounchingam</p>
+    <p>
+      <span lang="fr">Dernière mise à jour : août 2026</span>
+      <span lang="en">Last updated: August 2026</span>
+    </p>
+    <a href="#top"><span lang="fr">Haut de page ↑</span><span lang="en">Back to top ↑</span></a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
