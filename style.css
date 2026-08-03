@@ -312,12 +312,15 @@ html[data-theme="dark"] .btn--solid:hover { color: #0d141c; }
 .split__main p { margin-bottom: 18px; color: var(--ink-soft); }
 .split__main p strong { color: var(--ink); font-weight: 600; }
 
+.split__side { position: sticky; top: 92px; display: flex; flex-direction: column; gap: 18px; }
+
 .thesis {
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
   padding: 26px; box-shadow: var(--shadow);
   border-top: 3px solid var(--accent);
-  position: sticky; top: 92px;
 }
+.thesis--next { border-top-color: var(--primary); }
+.thesis--next .thesis__label { color: var(--primary); }
 .thesis__label {
   font: 600 11.5px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 12px;
@@ -516,7 +519,7 @@ html[data-theme="dark"] .filters button.is-on { color: #0d141c; }
   .stats li:last-child { grid-column: 1 / -1; }
   .cards3, .skills, .three { grid-template-columns: 1fr; }
   .split { grid-template-columns: 1fr; }
-  .thesis { position: static; }
+  .split__side { position: static; }
   .axes { grid-template-columns: repeat(2, 1fr); }
   .two { grid-template-columns: 1fr; gap: 8px; }
   .contact { grid-template-columns: 1fr; }
